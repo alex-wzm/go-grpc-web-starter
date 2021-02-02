@@ -7,5 +7,6 @@ var request = new EchoRequest();
 request.setMessage('Hello World!');
 
 echoService.echo(request, {}, function(err, response) {
-  console.log(response.message)
+  console.log(response)
+  document.getElementById("hello-world").innerHTML = response.array[0]
 });
